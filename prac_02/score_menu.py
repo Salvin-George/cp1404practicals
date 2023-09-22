@@ -30,14 +30,14 @@ def get_valid_score() -> int:
 
 
 def print_result(score):
-    if 100 >= score >= 90:
-        return "Excellent"
-    elif 90 > score >= 50:
-        return "Passable"
-    elif 50 > score >= 0:
-        return "Bad"
-    else:
+    if score < 0 or score > 100:
         return "Invalid score"
+    elif score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Passable"
+    else:
+        return "Bad"
 
 
 def print_stars(score):
