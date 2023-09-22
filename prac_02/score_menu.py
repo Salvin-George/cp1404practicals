@@ -3,27 +3,30 @@ Prac 2, menu score practical
 """
 
 
-def main()
+# noinspection PyTypeChecker
+def main():
     print("Menu \n(G)et score \n(P)rint result \n(S)how stars \n(Q)uit")
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "G":
             score = get_valid_score()
         elif choice == "P":
-            print_result(score)
+            print(print_result(score))
         elif choice == "S":
             print_stars(score)
         else:
             print("Invalid option")
-
-        print("Menu \n(G)et Name \n(P)rint greeting \n(S)ecret name")
+        print("Menu \n(G)et score \n(P)rint result \n(S)how stars \n(Q)uit")
         choice = input(">>> ").upper()
     print("Farewell!")
 
 
-def get_valid_score():
+def get_valid_score() -> int:
+    """
+    :rtype: object
+    """
     score = int(input("Score: "))
-    while 0<= score <= 100:
+    while 0 >= score >= 100:
         print("Invalid Name")
         score = int(input("Score: "))
     return score
