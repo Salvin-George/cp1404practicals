@@ -23,8 +23,8 @@ def main():
 
 def get_valid_score() -> int:
     score = int(input("Score: "))
-    while 0 >= score >= 100:
-        print("Invalid Name")
+    while score <= 0 or score >= 100:
+        print("Invalid Score")
         score = int(input("Score: "))
     return score
 

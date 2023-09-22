@@ -6,13 +6,12 @@ password_length = 10
 
 
 def main():
-    valid_password = get_valid_password()
-    print_lines(valid_password)
+    print_lines(get_valid_password())
 
 
-def get_valid_password():
+def get_valid_password() -> str:
     password = input("Password: ")
-    while len(password) < 10:
+    while len(password) < password_length:
         print("Invalid Password")
         password = input("Password: ")
     return password
