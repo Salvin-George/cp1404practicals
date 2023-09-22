@@ -22,9 +22,6 @@ def main():
 
 
 def get_valid_score() -> int:
-    """
-    :rtype: object
-    """
     score = int(input("Score: "))
     while 0 >= score >= 100:
         print("Invalid Name")
