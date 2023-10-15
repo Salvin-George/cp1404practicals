@@ -1,5 +1,7 @@
 """
 Program to count the occurrences of words in a string
+Estimate: 15mins
+Actual: 20mins
 """
 
 words = input("String: ").split()
