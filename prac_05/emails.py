@@ -1,7 +1,7 @@
 """
 Email dictionary
 Estimate: 30mins
-Actual:
+Actual: 35mins
 """
 
 
