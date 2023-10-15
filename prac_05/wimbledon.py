@@ -18,8 +18,9 @@ def read_file(FILENAME):
     with open(FILENAME, "r", encoding="utf-8-sig") as in_file:
         for line in in_file:
             if line.strip():
-                champion, country = line.split(",")
-                data.append([champion, country])
+                parts = line.split(',')
+                year, champion_country, champion, runner_up_country, runner_up, score = parts[:6]
+                data.append([champion, champion_country])
     return data
 
 
