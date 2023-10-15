@@ -12,7 +12,14 @@ def main():
         if email == '':
             break
         name = extract_name(email)
-        print(f"Extracted name: {name}")
+        confirm = input(f"Is this your name, {name}? (Y/n)")
+        if confirm.lower().strip() == "n":
+            user_name = input("Name: ")
+            user_email = input("Email: ")
+            name_to_email[user_email] = user_name
+            break
+        name_to_email[email] = name
+    print_emails(name_to_email)
 
 
 def extract_name(email):
@@ -23,5 +30,10 @@ def extract_name(email):
     return name
 
 
-main()
+def print_emails(name_to_email):
+    print("---")
+    for email, name in name_to_email.items():
+        print(f"{email} : {name}")
 
+
+main()
