@@ -33,7 +33,7 @@ def extract_name(email):
 def print_emails(name_to_email):
     print("---")
     for email, name in name_to_email.items():
-        print(f"{email} : {name}")
+        print(f"{name.capitalize()} : {email}")
 
 
 main()
