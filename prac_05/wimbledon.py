@@ -32,5 +32,13 @@ def get_champion_stats(formatted_data):
     return champion_count, sorted(country_set)
 
 
+def display_countries(champion_count, countries):
+    number_of_countries = len(countries)
+    print("Wimbledon Champions:")
+    for champion, count in champion_count.items():
+        print(f"{champion} : {count}")
+    print(f"\nThese {number_of_countries} countries have won Wimbledon:")
+    print(', '.join(countries))
 
 
+main()
