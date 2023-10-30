@@ -1,7 +1,7 @@
 """
 Practical questions
 Estimate: 10mins
-Actual:
+Actual: 8mins
 """
 
 from programing_language import ProgrammingLanguage
