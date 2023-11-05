@@ -1,7 +1,7 @@
 """
 Practical 07: Guitars
 Estimate: 20mins
-Actual:
+Actual: 21mins
 """
 import csv
 
