@@ -1,7 +1,7 @@
 """
 Prac 07
 Estimate: 25mins
-Actual:
+Actual: 30mins
 """
 
 from kivy.app import App
