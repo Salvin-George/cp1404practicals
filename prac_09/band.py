@@ -1,7 +1,7 @@
 """
 Band class
 Estimate: 20mins
-Actual:
+Actual: 19mins
 """
 
 
