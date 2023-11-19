@@ -1,7 +1,7 @@
 """
 Taxi class test
 Estimate: 10mins
-Actual:
+Actual: 8mins
 """
 import prac_09.taxi
 
