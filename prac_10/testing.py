@@ -4,12 +4,13 @@ Testing demo using assert and doctest
 """
 
 import doctest
+
 from prac_06.car import Car
 
 
 def repeat_string(s, n):
     """Repeat string s, n times, with spaces in between."""
-    return s * n
+    return ' '.join([s] * n)
 
 
 def is_long_word(word, length=5):
@@ -19,7 +20,7 @@ def is_long_word(word, length=5):
     False
     >>> is_long_word("supercalifrag")
     True
-    >>> is_long_word("Python", 6)
+    >>> is_long_word("Pythons", 6)
     True
     """
     return len(word) > length
@@ -32,29 +33,27 @@ def run_tests():
     # the test below should fail
     assert repeat_string("hi", 2) == "hi hi"
 
-    # TODO: 1. fix the repeat_string function above so that it passes the failing test
-    # Hint: "-".join(["yo", "yo"] -> "yo-yo"
-
     # assert test with custom message,
     # used to see if Car's init method sets the odometer correctly
     # this should pass (no output)
     test_car = Car()
-    assert test_car._odometer == 0, "Car does not set odometer correctly"
+    assert test_car._odometer == 0, "Car does not set odometer correctly."
 
-    # TODO: 2. write assert statements to show if Car sets the fuel correctly
     # Note that Car's __init__ function sets the fuel in one of two ways:
     # using the value passed in or the default
     # You should test both of these
-    test_car = Car(fuel=10)
+    test_car_01 = Car()
+    test_car_02 = Car(fuel=10)
+    assert test_car_01.fuel == 0, "Car_01 does not set odometer correctly."
+    assert test_car_02.fuel == 10, "Car_02 does not set odometer correctly."
 
 
 run_tests()
 
-# TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
-# doctest.testmod()
+doctest.testmod()
 
-# TODO: 4. Fix the failing is_long_word function
+
 # (don't change the tests, change the function!)
 
 # TODO: 5. Write and test a function to format a phrase as a sentence,
@@ -66,3 +65,19 @@ run_tests()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+
+def format_as_sentence(phrase):
+    """
+        >>> format_as_sentence('hello')
+        'Hello.'
+
+        >>> format_as_sentence('It is an ex parrot.')
+        'It is an ex parrot.'
+
+        >>> format_as_sentence('this is a valid test')
+        'This is a valid test.'
+        """
+    sentence = phrase.capitalize()
+    if not sentence.endswith('.'):
+        sentence += '.'
+    return sentence
