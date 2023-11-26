@@ -22,8 +22,19 @@ def do_something(n):
     """Print the squares of positive numbers from n down to 0."""
     if n < 0:
         print('Invalid starting number')
-    for i in range(n,-1,-1):
-        print(i**2)
+    for i in range(n, -1, -1):
+        print(i ** 2)
+
+
+def do_reverse_something(n):
+    """Print the squares of positive numbers from n down to 0 in reverse order."""
+    if n < 0:
+        print("Please provide a non-negative starting number.")
+        return
+    if n == 0:
+        return
+    print(n ** 2)
+    do_reverse_something(n - 1)
 
 
 # Q3:
@@ -35,3 +46,6 @@ def do_something(n):
 ...
 # Q4:
 do_something(4)
+print('--------------------')
+# Q5:
+do_reverse_something(4)
