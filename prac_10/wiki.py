@@ -15,3 +15,5 @@ while search:
         print("URL:", page.url)
     except wikipedia.exceptions.DisambiguationError as e:
         print(f"Ambiguous term. Options: {e.options}")
+
+    search = input("Search: ")
